@@ -1,0 +1,48 @@
+{% extends 'app1/layout.html' %}
+
+{% block content %}
+
+<br />
+<div class = "container center">
+    <button class="btn btn-outline-info grey darken-4 noprint center" onclick="window.print()">Print</button>
+</div>
+<br />
+
+{% for class in classes %}
+    <br />
+    <h3 align = "center">
+        Class TimeTable for {{ class.First_Name }} {{ class.Last_Name }} teaching Subject: {{ class.Subject }}
+    </h3>
+    <br />
+    <table class="highlight striped responsive-table container">
+        <tr>
+            <th>_____</th> <th>__0__</th>      <th>__1__</th>      <th>__2__</th>      <th>__3__</th>      <th>__4__</th>      <th>__5__</th>      <th>__6__</th>      <th>__7__</th>      <th>__8__</th>
+        </tr>
+        <tr>
+            <td>Monday</td><td>{{ class.Monday_0 }}</td><td>{{ class.Monday_1 }}</td><td>{{ class.Monday_2 }}</td><td>{{ class.Monday_3 }}</td><td>{{ class.Monday_4 }}</td><td>{{ class.Monday_5 }}</td><td>{{ class.Monday_6 }}</td><td>{{ class.Monday_7 }}</td><td>{{ class.Monday_8 }}</td>
+        </tr><br />
+        <tr>
+            <td>Tuesday</td><td>{{ class.Tuesday_0 }}</td><td>{{ class.Tuesday_1 }}</td><td>{{ class.Tuesday_2 }}</td><td>{{ class.Tuesday_3 }}</td><td>{{ class.Tuesday_4 }}</td><td>{{ class.Tuesday_5 }}</td><td>{{ class.Tuesday_6 }}</td><td>{{ class.Tuesday_7 }}</td><td>{{ class.Tuesday_8 }}</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td><td>{{ class.Wednesday_0 }}</td><td>{{ class.Wednesday_1 }}</td><td>{{ class.Wednesday_2 }}</td><td>{{ class.Wednesday_3 }}</td><td>{{ class.Wednesday_4 }}</td><td>{{ class.Wednesday_5 }}</td><td>{{ class.Wednesday_6 }}</td><td>{{ class.Wednesday_7 }}</td><td>{{ class.Wednesday_8 }}</td>
+        </tr>
+        <tr>
+            <td>Thursday</td><td>{{ class.Thursday_0 }}</td><td>{{ class.Thursday_1 }}</td><td>{{ class.Thursday_2 }}</td><td>{{ class.Thursday_3 }}</td><td>{{ class.Thursday_4 }}</td><td>{{ class.Thursday_5 }}</td><td>{{ class.Thursday_6 }}</td><td>{{ class.Thursday_7 }}</td><td>{{ class.Thursday_8 }}</td>
+        </tr>
+        <tr>
+            <td>Friday</td><td>{{ class.Friday_0 }}</td><td>{{ class.Friday_1 }}</td><td>{{ class.Friday_2 }}</td><td>{{ class.Friday_3 }}</td><td>{{ class.Friday_4 }}</td><td>{{ class.Friday_5 }}</td><td>{{ class.Friday_6 }}</td><td>{{ class.Friday_7 }}</td><td>{{ class.Friday_8 }}</td>
+        </tr>
+        <tr>
+            <td>Saturday</td><td>{{ class.Saturday_0 }}</td><td>{{ class.Saturday_1 }}</td><td>{{ class.Saturday_2 }}</td><td>{{ class.Saturday_3 }}</td><td>{{ class.Saturday_4 }}</td><td>{{ class.Saturday_5 }}</td><td>{{ class.Saturday_6 }}</td><td>{{ class.Saturday_7 }}</td><td>{{ class.Saturday_8 }}</td>
+        </tr>
+    </table>
+    <br />
+    <div class = "container center">
+       <button class="btn btn-outline-info grey noprint darken-4" onclick="document.location = '/teacher/edit/{{ class.id }}'">Edit</button>&nbsp;&nbsp;<button class="btn btn-outline-info grey noprint darken-4" onclick="document.location = '/'">Back</button>
+    </div>
+    <br />
+
+    {% endfor %}
+
+    {% endblock %}

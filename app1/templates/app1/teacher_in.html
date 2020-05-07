@@ -1,0 +1,63 @@
+{% extends 'app1/layout.html' %}
+
+{% block content %}
+
+    <br />
+    <br />
+    <h3 align = "center">
+        Insert a New Teacher
+    </h3>
+    <br />
+    <br />
+    <br />
+    <form method="post">
+        {% csrf_token %}
+        <div  class = "container">
+            <p>
+                First Name :{{ teacher.First_Name }}
+            </p>
+            <p>
+                Last Name: {{  teacher.Last_Name }}
+            </p>
+            <p>
+                Subject: {{  teacher.Subject }}
+            </p>
+        </div>
+        <!-- <br />
+        <table  class="highlight striped responsive-table container">
+            <tr>
+                <th>_____</th> <th>__0__</th>      <th>__1__</th>      <th>__2__</th>      <th>__3__</th>      <th>__4__</th>      <th>__5__</th>      <th>__6__</th>      <th>__7__</th>      <th>__8__</th>
+            </tr>
+            <tr>
+                <td>Monday</td><td>{{  teacher.Monday_0 }}</td><td>{{  teacher.Monday_1 }}</td><td>{{  teacher.Monday_2 }}</td><td>{{  teacher.Monday_3 }}</td><td>{{  teacher.Monday_4 }}</td><td>{{  teacher.Monday_5 }}</td><td>{{  teacher.Monday_6 }}</td><td>{{  teacher.Monday_7 }}</td><td>{{  teacher.Monday_8 }}</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td><td>{{  teacher.Tuesday_0 }}</td><td>{{  teacher.Tuesday_1 }}</td><td>{{  teacher.Tuesday_2 }}</td><td>{{  teacher.Tuesday_3 }}</td><td>{{  teacher.Tuesday_4 }}</td><td>{{  teacher.Tuesday_5 }}</td><td>{{  teacher.Tuesday_6 }}</td><td>{{  teacher.Tuesday_7 }}</td><td>{{  teacher.Tuesday_8 }}</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td><td>{{  teacher.Wednesday_0 }}</td><td>{{  teacher.Wednesday_1 }}</td><td>{{  teacher.Wednesday_2 }}</td><td>{{  teacher.Wednesday_3 }}</td><td>{{  teacher.Wednesday_4 }}</td><td>{{  teacher.Wednesday_5 }}</td><td>{{  teacher.Wednesday_6 }}</td><td>{{  teacher.Wednesday_7 }}</td><td>{{  teacher.Wednesday_8 }}</td>
+            </tr>
+            <tr>
+                <td>Thursday</td><td>{{  teacher.Thursday_0 }}</td><td>{{  teacher.Thursday_1 }}</td><td>{{  teacher.Thursday_2 }}</td><td>{{  teacher.Thursday_3 }}</td><td>{{  teacher.Thursday_4 }}</td><td>{{  teacher.Thursday_5 }}</td><td>{{  teacher.Thursday_6 }}</td><td>{{  teacher.Thursday_7 }}</td><td>{{  teacher.Thursday_8 }}</td>
+            </tr>
+            <tr>
+                <td>Friday</td><td>{{  teacher.Friday_0 }}</td><td>{{  teacher.Friday_1 }}</td><td>{{  teacher.Friday_2 }}</td><td>{{  teacher.Friday_3 }}</td><td>{{  teacher.Friday_4 }}</td><td>{{  teacher.Friday_5 }}</td><td>{{  teacher.Friday_6 }}</td><td>{{  teacher.Friday_7 }}</td><td>{{  teacher.Friday_8 }}</td>
+            </tr>
+            <tr>
+                <td>Saturday</td><td>{{  teacher.Saturday_0 }}</td><td>{{  teacher.Saturday_1 }}</td><td>{{  teacher.Saturday_2 }}</td><td>{{  teacher.Saturday_3 }}</td><td>{{  teacher.Saturday_4 }}</td><td>{{  teacher.Saturday_5 }}</td><td>{{  teacher.Saturday_6 }}</td><td>{{  teacher.Saturday_7 }}</td><td>{{  teacher.Saturday_8 }}</td>
+            </tr>
+        </table>
+        <br /> -->
+        <div  class = "container">
+			<button  class="btn waves-effect waves-light grey darken-4 center" type="submit" name="action">Submit
+				<i  class="material-icons right">send</i>
+			</button>
+            <br />
+        </div>
+	</form>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    {% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'app1/layout.html' %}
+
+{% block content %}
+<br />
+<div align="center">
+    <div class="container">
+        <h1 align="left">
+            Welcome, {{ request.user.first_name }} {{ request.user.last_name }}
+        </h1>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="container card-panel hoverable z-depth-5">
+        <h3 class="black-text">
+            User Details
+        </h3>
+        <br />
+        <div class="black-text">
+            Your Username: {{ request.user.username }}
+            <br />
+            Your Name: {{ request.user.first_name }} {{ request.user.last_name }}
+            <br />
+            Your Email: {{ request.user.email }}
+            <br />
+            Your Last Login Timestamp(UTC): {{ request.user.last_login }}
+            <br />
+            <br />
+            <emph>
+                For any errors contact the admin.
+            </emph>
+        </div>
+        <br />
+        <br />
+    </div>
+    <br />
+    <br />
+</div>
+
+{% endblock %}

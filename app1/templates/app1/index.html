@@ -1,0 +1,40 @@
+{% extends 'app1/layout.html' %}
+
+{% block content %}
+
+<br />
+<div align="center">
+	<div class="container card-panel hoverable z-depth-5">
+		<h2 align="center">
+			Welcome to Time Table Managment System
+		</h2>
+        <br />
+        <div class = "container center">
+            <img src = "https://images.shiksha.com/mediadata/images/articles/1523342686phpo9K5NA.jpeg" style='width:100%;' alt = "TimeTable">
+        </div>
+        <div>
+            <h3>
+                Using the following links to update the timetable to your needs
+            </h3>
+        </div>
+        <br />
+        <br />
+        <h4>
+            Links
+        </h4>
+		<p>
+			<ul style="list-style-type:circle">
+                <li>To insert new class timetable <a href = "/class_insert">Click Here</a></li>
+                <li>To view class timetable <a href = "/class">Click Here</a></li>
+                <li>To view class timetable for all classes <a href = "/class_all">Click Here</a></li>
+                <li>To insert new teacher timetable <a href = "/teacher_insert">Click Here</a></li>
+                <li>To view teacher timetable <a href = "/teacher">Click Here</a></li>
+            </ul>
+		</p>
+    </div>
+
+    <br />
+</div>
+<br />
+
+{% endblock %}

@@ -1,0 +1,5 @@
+django
+django_heroku
+gunicorn
+dj-database-url
+whitenoise

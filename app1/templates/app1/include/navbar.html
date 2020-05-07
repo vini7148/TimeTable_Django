@@ -1,0 +1,66 @@
+<div class="container noprint">
+  <nav class="grey darken-4 sidenav-trigger">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">&nbsp;&nbsp;<i class="fas fa-table">&nbsp;&nbsp;</i>&nbsp;&nbsp;</a>
+        <a herf="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+        
+          {% if request.user.is_authenticated %}
+            <li><a href="{% if request.user.is_superuser %}/admin {% else %}/user{% endif %}">Logged in as {{ request.user.username }}</a></li>
+
+            <li><a class='dropdown-trigger btn grey darken-1' href='#' data-target='dropdown1'>Class<i class="material-icons right">arrow_drop_down</i></a></li>
+              <ul id="dropdown1" class='dropdown-content'>
+                <li><a href="/class_insert">Insert a Class</a></li>
+                <li><a href="/class">View a Class</a></li>
+                <li><a href="/class_delete">Delete a Class</a></li>
+                <li><a href="/class_all">View All Classes</a></li>
+              </ul>
+
+            <li><a class='dropdown-trigger btn grey darken-1' href='#' data-target='dropdown2'>Teacher<i class="material-icons right">arrow_drop_down</i></a></li>
+              <ul id="dropdown2" class='dropdown-content'>            
+                <li><a href="/teacher_insert">Insert Teacher</a></li>
+                <li><a href="/teacher_insert/add_class">Add a class to a Teacher</a></li>
+                <li><a href="/teacher">View a Teacher</a></li>
+                <li><a href="/teacher_delete">Delete a Teacher</a></li>
+                <li><a href="/teacher_all">View all Teachers</a></li>
+              </ul>
+            
+            <li><a href="/logout">Logout</a></li>
+          
+          {% elif not request.user.is_authenticated %}
+            <!-- <li><a href="/register">Register</a></li> -->
+            <li><a href="/login">Login</a></li>
+
+          {% endif %}
+        
+        </ul>
+      </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <br>
+    <br>
+      <li><a href="/">Home</a></li>
+      
+      {% if request.user.is_authenticated %}
+          <li><a href="{% if request.user.is_superuser %}/admin {% else %}/user{% endif %}">Logged in as {{ request.user.username }}</a></li>
+          <li><a href="/class_insert">Insert Class</a></li>
+          <li><a href="/class">View a Class</a></li>
+          <li><a href="/class_delete">Delete a Class</a></li>
+          <li><a href="/class_all">All Classes</a></li>
+          <li><a href="/teacher_insert">Insert Teacher</a></li>
+          <li><a href="/teacher_insert/add_class">Add a class to a Teacher</a></li>
+          <li><a href="/teacher">View a Teacher</a></li>
+          <li><a href="/teacher_delete">Delete a Teacher</a></li>
+          <li><a href="/teacher_all">View all Teachers</a></li>
+          <li><a href="/logout">Logout</a></li>
+      
+      {% elif not request.user.is_authenticated %}
+          <!-- <li><a href="/register">Register</a></li> -->
+          <li><a href="/login">Login</a></li>
+
+      {% endif %}
+  
+    </ul>
+</div>

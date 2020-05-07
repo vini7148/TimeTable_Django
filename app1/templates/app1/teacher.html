@@ -1,0 +1,45 @@
+{% extends "app1/layout.html" %}
+
+{% block content %}
+
+	<br />
+	<div class = "container">
+		<h1 align="center" class="noprint">
+			Teacher Time Table
+		</h1>
+		<br />
+		<br />
+		<div class="container noprint">
+			<form method="post">
+				{% csrf_token %}
+				{{ form.as_p }}
+				<br />
+				<button class="btn waves-effect waves-light grey darken-4" type="submit" name="action">Submit
+					<i class="material-icons right">send</i>
+				</button>
+				<br />
+			</form>
+		</div>
+		<br />
+		<br />
+		<h3 align="center" class="noprint">
+			Below is the list of all saved classes
+		</h3>
+		<br />
+		<div class = "container center">
+			{% for t in classes %}
+        		<a href="{{ t.id }}" style="color:#000">
+            		<div class="container card-panel hoverable z-depth-5 center">
+                		<h4 align = "center" class="black-text">
+                        	{{ t.First_Name }} {{t.Last_Name}}
+                		</h4>                
+            		</div>
+        		</a>
+        		<br />
+			{% endfor %}
+		</div>
+	</div>
+	<br />
+	<br />
+
+{% endblock %}
