@@ -8,7 +8,7 @@ from .models import Class, Teacher
 from .forms import Class_in, Class_se, Teacher_in, Teacher_se
 
 # Create your views here.
-def handler400(request, *args, **argv):
+def handler400(request, exception, *args, **argv):
     response = render(
         request,
         'app1/400.html',
@@ -20,7 +20,7 @@ def handler400(request, *args, **argv):
     response.status_code = 400
     return response
 
-def handler404(request, *args, **argv):
+def handler404(request, exception, *args, **argv):
     response = render(
         request,
         'app1/404.html',
@@ -45,7 +45,7 @@ def handler500(request, *args, **argv):
     response.status_code = 500
     return response
 
-def handler503(request, *args, **argv):
+def handler503(request, exception, *args, **argv):
     response = render(
         request,
         'app1/503.html',
@@ -283,6 +283,8 @@ def teacher_in(request):
     if request.user.is_authenticated:
         if request.method == "POST":
             form = Teacher_in(request.POST)
+            # print(form)
+            # print(form.errors)
             if form.is_valid():
                 fn = form.cleaned_data['First_Name']
                 ln = form.cleaned_data['Last_Name']

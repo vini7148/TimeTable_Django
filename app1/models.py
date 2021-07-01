@@ -164,6 +164,16 @@ class Teacher(models.Model):
                     self.Monday_0 = temp
                     self.save()
                     print(self.Monday_0)
+                else:
+                    temp = mon_0
+                    try:
+                        temp = mon_0.replace(str(cla.Number + ' ' + cla.Section), '')
+                    except:
+                        pass
+                    print(temp)
+                    self.Monday_0 = temp
+                    self.save()
+                    print(self.Monday_0)
 
                 mon_1 = str(cla.Monday_1)
                 if sub in mon_1:
@@ -175,6 +185,16 @@ class Teacher(models.Model):
                     self.Monday_1 = temp
                     self.save()
                     print(self.Monday_1)
+                else:
+                    temp = mon_1
+                    try:
+                        temp = mon_1.replace(str(cla.Number + ' ' + cla.Section), '')
+                    except:
+                        pass
+                    print(temp)
+                    self.Monday_1 = temp
+                    self.save()
+                    print(self.Monday_1)
 
                 mon_2 = str(cla.Monday_2)
                 if sub in mon_2:
@@ -182,6 +202,16 @@ class Teacher(models.Model):
                     if mon_2 is not None:
                         temp = mon_2
                     temp = " " + str(cla.Number) + " " + str(cla.Section)
+                    print(temp)
+                    self.Monday_2 = temp
+                    self.save()
+                    print(self.Monday_2)
+                else:
+                    temp = mon_2
+                    try:
+                        temp = mon_2.replace(str(cla.Number + ' ' + cla.Section), '')
+                    except:
+                        pass
                     print(temp)
                     self.Monday_2 = temp
                     self.save()
@@ -263,6 +293,16 @@ class Teacher(models.Model):
                     self.Tuesday_0 = temp
                     self.save()
                     print(self.Tuesday_0)
+                else:
+                    temp = Tues_0
+                    try:
+                        temp = Tues_0.replace(str(cla.Number + ' ' + cla.Section), '')
+                    except:
+                        pass
+                    print(temp)
+                    self.Tuesday_0 = temp
+                    self.save()
+                    print(self.Tuesday_0)
 
                 Tues_1 = str(cla.Tuesday_1)
                 if sub in Tues_1:
@@ -270,6 +310,16 @@ class Teacher(models.Model):
                     if Tues_1 is not None:
                         temp = Tues_1
                     temp = " " + str(cla.Number) + " " + str(cla.Section)
+                    print(temp)
+                    self.Tuesday_1 = temp
+                    self.save()
+                    print(self.Tuesday_1)
+                else:
+                    temp = Tues_1
+                    try:
+                        temp = Tues_1.replace(str(cla.Number + ' ' + cla.Section), '')
+                    except:
+                        pass
                     print(temp)
                     self.Tuesday_1 = temp
                     self.save()
@@ -285,6 +335,16 @@ class Teacher(models.Model):
                     self.Tuesday_2 = temp
                     self.save()
                     print(self.Tuesday_2)
+                else:
+                    temp = Tues_2
+                    try:
+                        temp = Tues_2.replace(str(cla.Number + ' ' + cla.Section), '')
+                    except:
+                        pass
+                    print(temp)
+                    self.Tuesday_2 = temp
+                    self.save()
+                    print(self.Tuesday_2)
 
                 Tues_3 = str(cla.Tuesday_3)
                 if sub in Tues_3:
@@ -296,6 +356,16 @@ class Teacher(models.Model):
                     self.Tuesday_3 = temp
                     self.save()
                     print(self.Tuesday_3)
+                else:
+                    temp = Tues_3
+                    try:
+                        temp = Tues_3.replace(str(cla.Number + ' ' + cla.Section), '')
+                    except:
+                        pass
+                    print(temp)
+                    self.Tuesday_3 = temp
+                    self.save()
+                    print(self.Tuesday_3)
 
                 Tues_4 = str(cla.Tuesday_4)
                 if sub in Tues_4:
@@ -303,6 +373,16 @@ class Teacher(models.Model):
                     if Tues_4 is not None:
                         temp = Tues_4
                     temp = " " + str(cla.Number) + " " + str(cla.Section)
+                    print(temp)
+                    self.Tuesday_4 = temp
+                    self.save()
+                    print(self.Tuesday_4)
+                else:
+                    temp = Tues_4
+                    try:
+                        temp = Tues_4.replace(str(cla.Number + ' ' + cla.Section), '')
+                    except:
+                        pass
                     print(temp)
                     self.Tuesday_4 = temp
                     self.save()
@@ -362,6 +442,16 @@ class Teacher(models.Model):
                     self.Wednesday_0 = temp
                     self.save()
                     print(self.Wednesday_0)
+                else:
+                    temp = Wednes_0
+                    try:
+                        temp = Wednes_0.replace(str(cla.Number + ' ' + cla.Section), '')
+                    except:
+                        pass
+                    print(temp)
+                    self.Wednesday_0 = temp
+                    self.save()
+                    print(self.Wednesday_0)
 
                 Wednes_1 = str(cla.Wednesday_1)
                 if sub in Wednes_1:
@@ -369,6 +459,16 @@ class Teacher(models.Model):
                     if Wednes_1 is not None:
                         temp = Wednes_1
                     temp = " " + str(cla.Number) + " " + str(cla.Section)
+                    print(temp)
+                    self.Wednesday_1 = temp
+                    self.save()
+                    print(self.Wednesday_1)
+                else:
+                    temp = Wednes_1
+                    try:
+                        temp = Wednes_1.replace(str(cla.Number + ' ' + cla.Section), '')
+                    except:
+                        pass
                     print(temp)
                     self.Wednesday_1 = temp
                     self.save()

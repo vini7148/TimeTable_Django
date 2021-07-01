@@ -142,7 +142,7 @@ class Teacher_in(forms.ModelForm):
 
     class Meta():
         model = Teacher
-        # fields = ('First_Name', 'Last_Name', 'Subject')
+        fields = ('First_Name', 'Last_Name', 'Subject')
         exclude = ()
 
 class Teacher_se(forms.Form):
