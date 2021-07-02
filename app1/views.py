@@ -283,8 +283,8 @@ def teacher_in(request):
     if request.user.is_authenticated:
         if request.method == "POST":
             form = Teacher_in(request.POST)
-            # print(form)
-            # print(form.errors)
+            # # print(form)
+            # # print(form.errors)
             if form.is_valid():
                 fn = form.cleaned_data['First_Name']
                 ln = form.cleaned_data['Last_Name']
